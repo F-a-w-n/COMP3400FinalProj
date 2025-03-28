@@ -1,3 +1,4 @@
+// dbtypes.cpp - original code by Fawn Barisic - provides helper classes to store rows for each table of the company database
 #include <iostream>
 #include <map>
 #include <string>

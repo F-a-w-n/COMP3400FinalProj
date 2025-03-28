@@ -1,3 +1,4 @@
+// dbuser.cpp - original code by Fawn Barisic - provides functions to create, delete, access, and change values in the company database 
 #include <iostream>
 #include <map>
 #include <string>

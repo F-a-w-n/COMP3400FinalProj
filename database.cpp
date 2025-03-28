@@ -1,3 +1,4 @@
+// database.cpp - original code by Fawn Barisic - directly interfaces with SQLite database through custom string commands
 #include <stdio.h>
 #include <stdlib.h>
 #include "sqlite3.h"
