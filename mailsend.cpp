@@ -112,7 +112,6 @@ class MailSend {
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 1L);
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 2L);
     curl_easy_setopt(curl, CURLOPT_CAINFO, "cacert.pem"); // ca cert to ensure secure connection
-    curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L); 
     
     res = curl_easy_perform(curl); // sends the email
     
