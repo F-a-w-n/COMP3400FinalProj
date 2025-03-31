@@ -411,16 +411,11 @@ static Customer getCustomer(int customerID) {
 }
 };
 
+/*
 int main(int argc, char *argv[]) {
-  /*
-  DBUser::createRegion(new Region(2, 1500.00, 220.5, 199.2));
-  DBUser::createCustomer(new Customer(2, "Gusbert", "456 7th blvd.", 2));
-  DBUser::createBill(new Bill(2, 1, 18.1, 8.0, 80.50, *new Date(2024, 12, 10), *new Date(2025, 1, 10)));
-  DBUser::createResource(new Resource(2, "solar", 12.25, 10.00, 0.25));
-  DBUser::createExpense(new Expense(2, 1, "panel dusting service", 500.25, *new Date(2025, 2, 15)));
-  DBUser::createFootprint(new Footprint(2, 2, 10, 2.5));
-  DBUser::createSupply(new Supply(2, 2, 150.76, 125.34));
-  */
+    
+    DBUser::createBill(new Bill(3, 3, 18.1, 8.0, 80.50, *new Date(2024, 12, 10), *new Date(2025, 1, 10)));
+    
 
   for (Customer c : DBUser::getAllCustomers()) {
     for(auto const& p : c.attr) {
@@ -436,6 +431,7 @@ int main(int argc, char *argv[]) {
     cout << endl;
   }
   cout << endl;
+  
   for (Bill c : DBUser::getAllBills()) {
     for(auto const& p : c.attr) {
       cout << p.first << "=" << p.second << endl;
@@ -443,6 +439,8 @@ int main(int argc, char *argv[]) {
     cout << endl;
   }
   cout << endl;
+
+  
   for (Resource c : DBUser::getAllResources()) {
     for(auto const& p : c.attr) {
       cout << p.first << "=" << p.second << endl;
@@ -472,3 +470,4 @@ int main(int argc, char *argv[]) {
   }
   return 0;
 }
+*/

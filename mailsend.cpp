@@ -252,7 +252,7 @@ class MailSend {
     return size * members;
   }
 };
-  
+/*
   int main()
   {
     // Example usage
@@ -265,3 +265,4 @@ class MailSend {
     
     return 0;
 }
+*/
