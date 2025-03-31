@@ -1,4 +1,4 @@
-// dbuser.cpp - original code by Fawn Barisic - provides functions to create, delete, access, and change values in the company database 
+// dbuser.cpp - original code by Fawn Barisic - provides functions to create, access, change, and delete values in the company database 
 #include <iostream>
 #include <map>
 #include <string>
@@ -11,7 +11,7 @@ using namespace std;
 class DBUser {
 public:
   // Customer CRUD operations
-  static Customer getCustomer(int customerID) {
+static Customer getCustomer(int customerID) {
       string comstr = "SELECT * FROM CUSTOMER WHERE customerID = " + to_string(customerID) + ";";
       char* com = (char*)comstr.c_str();
       vector<map<string,string>> data = Database::runCommand(com);
