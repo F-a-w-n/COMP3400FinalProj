@@ -9,6 +9,7 @@
 
 // Function to generate invoices.
 class CustomerInvoice {
+  public:
   static string generateInvoice(int customerID) {
     try {
       // Retrieves customer information from the database.
@@ -79,7 +80,7 @@ class CustomerInvoice {
       // Catch any runtime errors.
     } catch (const runtime_error& e) {
       cerr << "Error generating invoice: " << e.what() << endl;
-      return;
+      return ""s;
     }
   }
   static bool generateInvoiceEmail(int customerID, string email) {

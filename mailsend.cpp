@@ -102,8 +102,9 @@ class MailSend {
     curl_easy_setopt(curl, CURLOPT_USERNAME, username.c_str());
     curl_easy_setopt(curl, CURLOPT_PASSWORD, password.c_str());
     curl_easy_setopt(curl, CURLOPT_USE_SSL, (long)CURLUSESSL_ALL); // uses SSL encryption
-    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 30L);                  // 30s timeout to ensure enough time to send
-    
+    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 30L);                  // 30s timeout to ensure enough time to connect
+    curl_easy_setopt(curl, CURLOPT_TIMEOUT_MS, 60000L);            // 60s timeout to ensure enough time to send
+
     curl_easy_setopt(curl, CURLOPT_READFUNCTION, read_callback);  // passes the callback function defined below to read the email data to a buffer
     curl_easy_setopt(curl, CURLOPT_READDATA, &context);
     curl_easy_setopt(curl, CURLOPT_UPLOAD, 1L);                   // file upload
@@ -111,6 +112,7 @@ class MailSend {
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 1L);
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 2L);
     curl_easy_setopt(curl, CURLOPT_CAINFO, "cacert.pem"); // ca cert to ensure secure connection
+    curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L); 
     
     res = curl_easy_perform(curl); // sends the email
     
@@ -252,6 +254,7 @@ class MailSend {
     return size * members;
   }
 };
+
 /*
   int main()
   {
@@ -259,7 +262,7 @@ class MailSend {
     string to = "barisicc@uwindsor.ca";
     string subject = "Test email with attachment";
     string body = "Hello,\n\nWe are sending you this email to remind you of your due electrical bill. Please review the attached bill and send payment at your earliest convenience.\n\nBest regards,\nThe PowerPlex Team";
-    string attachment_path = "./test.txt";
+    string attachment_path = "./ExpenseReport.txt";
     
     bool success = MailSend::send_email_with_attachment(to, subject, body, attachment_path);
     

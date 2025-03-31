@@ -8,6 +8,7 @@
 using namespace std;
 
 class ExpenseReport {
+    public:
     // Function to generate expense reports.
     static string generateExpenseReport() {
         try {
@@ -57,7 +58,7 @@ class ExpenseReport {
         // Catch any runtime errors.
         } catch (const runtime_error& e) {
             cerr << "Error generating expense report: " << e.what() << endl;
-            return;
+            return ""s;
         }
     }
 

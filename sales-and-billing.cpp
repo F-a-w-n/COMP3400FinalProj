@@ -9,6 +9,7 @@
 using namespace std;
 
 class SalesReport {
+  public:
   // Function to calculate sales and billing info.
   static string calculateSalesBilling(int resourceID) {
     try {
@@ -57,7 +58,7 @@ class SalesReport {
     // Catch any runtime errors.
     } catch (const runtime_error& e) {
       cerr << "Error generating sales and billing report: " << e.what() << endl;
-      return;
+      return ""s;
     }
 
   }

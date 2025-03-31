@@ -9,6 +9,7 @@
 using namespace std;
 
 class ImportExport {
+    public:
     // Function to calculate import/export expenses.
     static string calculateImportExportExpenses(int resourceID) {
         try {
@@ -52,10 +53,11 @@ class ImportExport {
 
             // Displays a message.
             cout << "Import/Export expenses report generated successfully and saved to " << filename << endl;
-        
+            return filename;
         // Catch any runtime errors.
         } catch (const runtime_error& e) {
             cerr << "Error generating import/export expenses report: " << e.what() << endl;
+            return ""s;
         }
     }
 
