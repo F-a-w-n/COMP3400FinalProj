@@ -48,13 +48,12 @@ class Database {
     if( rc != SQLITE_OK ){
         fprintf(stderr, "SQL error: %s\n", zErrMsg);
         sqlite3_free(zErrMsg);
-    } else {
-        fprintf(stdout, "Operation completed successfully\n");
     }
     sqlite3_close(db);
     return results;
   }
 };
+
 /*
 int main() {
   Database::runCommand(" CREATE TABLE REGION( regionID INT NOT NULL, revenue DOUBLE, production DOUBLE, use DOUBLE, PRIMARY KEY (regionID) );");
@@ -65,4 +64,5 @@ int main() {
   Database::runCommand(" CREATE TABLE FOOTPRINT( customerID INT NOT NULL, resourceID INT NOT NULL, amount DOUBLE, totalCarbon DOUBLE, PRIMARY KEY (customerID, resourceID), FOREIGN KEY (customerID) REFERENCES CUSTOMER(customerID), FOREIGN KEY (resourceID) REFERENCES RESOURCE(resourceID));");
   Database::runCommand(" CREATE TABLE SUPPLY( resourceID INT NOT NULL, regionID INT NOT NULL, production DOUBLE, use DOUBLE, PRIMARY KEY (resourceID, regionID), FOREIGN KEY (resourceID) REFERENCES RESOURCE(resourceID), FOREIGN KEY (regionID) REFERENCES REGION(regionID));");
   return 0;
-} */
+}
+*/

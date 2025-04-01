@@ -230,14 +230,14 @@ class Footprint : public Helper {
     customerID = getInt("customerID");
     resourceID = getInt("resourceID");
     amount = getDouble("amount");
-    totalcarbon = getDouble("totalcarbon");
+    totalcarbon = getDouble("totalCarbon");
   }
   
   Footprint(int custID, int resID, double amt, double totalC) : 
     Helper({{"customerID", to_string(custID)}, 
             {"resourceID", to_string(resID)}, 
             {"amount", to_string(amt)}, 
-            {"totalcarbon", to_string(totalC)}}),
+            {"totalCarbon", to_string(totalC)}}),
     customerID(custID), resourceID(resID), amount(amt), totalcarbon(totalC) {}
   
   int getCustomerID() { return customerID; }

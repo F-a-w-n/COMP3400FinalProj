@@ -4,8 +4,6 @@
 #include <fstream>
 #include <string>
 #include <ctime>
-#include "./dbuser.cpp"
-#include "./mailsend.cpp"
 
 // Function to generate invoices.
 class CustomerInvoice {
