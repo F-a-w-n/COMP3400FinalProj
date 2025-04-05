@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run PowerPlex App",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/output.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "C:/msys64/ucrt64/bin",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+      "preLaunchTask": "Build PowerPlex App"
+    }
+  ]
+}

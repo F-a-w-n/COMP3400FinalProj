@@ -1,0 +1,7 @@
+Invoice for Customer: Jessica Jessicaton
+Address: 1 cool st.
+
+Bill ID: 1, Due Amount: $120, Due Interest: $25.2, Total Due: $145.2, Date: 2025-2-1
+Bill ID: 2, Due Amount: $3, Due Interest: $0.993, Total Due: $3.993, Date: 2025-1-1
+
+Total Due: $149.193

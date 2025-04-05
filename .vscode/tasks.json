@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build PowerPlex App",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "export PATH=/ucrt64/bin:$PATH && g++ Power.cpp CustomerTab.cpp FootprintTab.cpp SupplyTab.cpp ExpenseTab.cpp dbuser.cpp database.cpp dbtypes.cpp mailsend.cpp -o output.exe $(wx-config --cxxflags --libs) -lsqlite3 -lcurl -lssl -lcrypto"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

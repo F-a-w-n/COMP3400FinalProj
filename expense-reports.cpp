@@ -2,6 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "./dbuser.cpp"
+#include "./mailsend.cpp"
 
 using namespace std;
 
